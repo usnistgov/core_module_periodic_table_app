@@ -16,3 +16,9 @@ Quick start
       'core_module_periodic_table',
     ]
 
+2. Include the core_module_periodic_table URLconf in your project urls.py
+---------------------------------------------------------------------
+
+.. code:: python
+
+    url(r'^', include('core_module_periodic_table.urls')),
