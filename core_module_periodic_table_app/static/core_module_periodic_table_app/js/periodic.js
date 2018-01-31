@@ -6,18 +6,6 @@ var periodicTablePopupOptions = {
 
         // Initialization
         var popUpState = openPopUp.find('.periodic-table-keep-state');
-
-        if(popUpState.text() !== 'true') {
-            $.each(pTable.find('.selected'), function(index, element) {
-                $(element).removeClass('selected');
-            });
-
-            $.each(pTable.find('.orig-selected'), function(index, element) {
-                $(element).addClass('selected');
-            });
-        }
-
-        popUpState.text("false");
     }
 };
 
