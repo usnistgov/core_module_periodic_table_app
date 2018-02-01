@@ -21,7 +21,7 @@ with open(join(dirname(__file__), "README.rst")) as f:
 chdir(normpath(join(abspath(__file__), pardir)))
 
 setup(
-    name="core_module_periodic_table",
+    name="core_module_periodic_table_app",
     version="1.0.0-alpha1",
     description="Periodic table module for the parser core project",
     long_description=long_desc,
