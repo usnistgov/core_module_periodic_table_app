@@ -1,1 +1,1 @@
-core-parser-app==1.0.0-alpha6
+core-parser-app==1.0.0-beta1
