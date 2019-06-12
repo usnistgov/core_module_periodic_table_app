@@ -1,1 +1,1 @@
-core-parser-app==1.3.0.dev1
+core-parser-app==1.3.0

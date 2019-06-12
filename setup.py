@@ -22,7 +22,7 @@ chdir(normpath(join(abspath(__file__), pardir)))
 
 setup(
     name="core_module_periodic_table_app",
-    version="1.3.0.dev1",
+    version="1.3.0",
     description="Periodic table module for the parser core project",
     long_description=long_desc,
     author="NIST IT Lab",
