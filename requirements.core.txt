@@ -1,1 +1,1 @@
-core-parser-app==1.4.0
+core-parser-app==1.5.0
