@@ -6,5 +6,9 @@ from django.urls import re_path
 from core_module_periodic_table_app.views import PeriodicTableModule
 
 urlpatterns = [
-    re_path(r'module-periodic-table', PeriodicTableModule.as_view(), name='core_module_periodic_table_view'),
+    re_path(
+        r"module-periodic-table",
+        PeriodicTableModule.as_view(),
+        name="core_module_periodic_table_view",
+    ),
 ]
