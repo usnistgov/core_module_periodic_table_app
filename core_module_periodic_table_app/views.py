@@ -15,7 +15,7 @@ class PeriodicTableModule(AbstractPopupModule):
         )
 
     def _retrieve_data(self, request):
-        """ Retrieve module's data
+        """Retrieve module's data
 
         Args:
             request:
@@ -33,7 +33,7 @@ class PeriodicTableModule(AbstractPopupModule):
         return data
 
     def _render_data(self, request):
-        """ Return module's data rendering
+        """Return module's data rendering
 
         Args:
             request:
@@ -47,8 +47,7 @@ class PeriodicTableModule(AbstractPopupModule):
             return "No selected element."
 
     def _get_popup_content(self):
-        """ Return module's data rendering
-        """
+        """Return module's data rendering"""
         selected_elements = [self.data]
         template = AbstractModule.render_template(
             "core_module_periodic_table_app/periodic.html",
