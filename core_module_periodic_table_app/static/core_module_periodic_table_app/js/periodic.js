@@ -1,30 +1,11 @@
-var periodicTablePopupOptions = {
-    width: 700,
-    title: "Select Element",
-    create: function(event, ui) {
-        var pTable = $(this).find('.periodic-table');
-
-        // Initialization
-        var popUpState = openPopUp.find('.periodic-table-keep-state');
-    }
-};
-
-// Selection highlight
-$(document).on('click', '.periodic-table-simple td.p-elem', function(event) {
-    var pTable = openPopUp.find('.periodic-table');
-    $.each(pTable.find('.selected'), function(index, element) {
-        $(element).removeClass('selected');
-    });
-
-    $(this).addClass('selected');
-});
-
+/** Periodic table module script */
 savePeriodicTableData = function() {
-    var selectedElement = openPopUp.find('.periodic-table .selected');
+    let jqModuleOpenModal = $($("#modal-" + moduleElement[0].id)[0]);
+    let selectedElement = jqModuleOpenModal.find('.periodic-table .selected');
 
-    openPopUp.find('.periodic-table-keep-state').text("true");
+    jqModuleOpenModal.find('.periodic-table-keep-state').text("true");
 
-    $.each(openPopUp.find('.periodic-table').find('.orig-selected'), function(index, element) {
+    $.each(jqModuleOpenModal.find('.periodic-table').find('.orig-selected'), function(index, element) {
         $(element).removeClass('orig-selected');
     });
     selectedElement.addClass('orig-selected');
@@ -32,4 +13,21 @@ savePeriodicTableData = function() {
     return {'selectedElement': selectedElement.text()};
 };
 
-configurePopUp('module-periodic-table', periodicTablePopupOptions, savePeriodicTableData);
+var periodicTablePopupOptions = {
+    title: "Select Element",
+    getData: savePeriodicTableData
+};
+
+// Selection highlight
+$(document).on('click', '.periodic-table-simple td.p-elem', function(event) {
+
+    var pTable = $($("#modal-" + moduleElement[0].id)[0]).find('.periodic-table');
+    $.each(pTable.find('.selected'), function(index, element) {
+        $(element).removeClass('selected');
+    });
+
+    $(this).addClass('selected');
+});
+
+
+configurePopUp('module-periodic-table', periodicTablePopupOptions);
