@@ -6,6 +6,8 @@ from core_parser_app.tools.modules.views.module import AbstractModule
 
 
 class PeriodicTableModule(AbstractPopupModule):
+    """Periodic Table Module"""
+
     def __init__(self):
         AbstractPopupModule.__init__(
             self,
@@ -43,8 +45,8 @@ class PeriodicTableModule(AbstractPopupModule):
         """
         if len(self.data) > 0:
             return "Chosen element: " + self.data
-        else:
-            return "No selected element."
+
+        return "No selected element."
 
     def _get_popup_content(self):
         """Return module's data rendering"""
