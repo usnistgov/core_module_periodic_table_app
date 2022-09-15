@@ -9,10 +9,14 @@ from core_module_periodic_table_app.views import PeriodicTableModule
 
 
 class TestPeriodicTableModuleRetrieveData(TestCase):
+    """Test Periodic Table Module Retrieve Data"""
+
     @patch("core_parser_app.tools.modules.views.module.AbstractModule.render_template")
     def test_periodic_table_module_retrieve_data_returns_element_if_data_given(
         self, render_template
     ):
+        """test_periodic_table_module_retrieve_data_returns_element_if_data_given"""
+
         # Arrange
         request = HttpRequest()
         element = "AC"
@@ -29,6 +33,8 @@ class TestPeriodicTableModuleRetrieveData(TestCase):
     def test_periodic_table_module_retrieve_data_returns_empty_if_no_data_given(
         self, render_template
     ):
+        """test_periodic_table_module_retrieve_data_returns_empty_if_no_data_given"""
+
         # Arrange
         request = HttpRequest()
         request.method = "GET"
@@ -42,6 +48,8 @@ class TestPeriodicTableModuleRetrieveData(TestCase):
     def test_periodic_table_module_retrieve_data_returns_element_if_selected_data_given(
         self, render_template
     ):
+        """test_periodic_table_module_retrieve_data_returns_element_if_selected_data_given"""
+
         # Arrange
         request = HttpRequest()
         element = "AC"
@@ -58,6 +66,8 @@ class TestPeriodicTableModuleRetrieveData(TestCase):
     def test_periodic_table_module_retrieve_data_returns_empty_if_no_selected_data_given(
         self, render_template
     ):
+        """test_periodic_table_module_retrieve_data_returns_empty_if_no_selected_data_given"""
+
         # Arrange
         request = HttpRequest()
         request.method = "POST"
@@ -69,10 +79,14 @@ class TestPeriodicTableModuleRetrieveData(TestCase):
 
 
 class TestPeriodicTableModuleRenderData(TestCase):
+    """Test Periodic Table Module Render Data"""
+
     @patch("core_parser_app.tools.modules.views.module.AbstractModule.render_template")
     def test_periodic_table_module_render_data_returns_the_chosen_element_if_given(
         self, render_template
     ):
+        """test_periodic_table_module_render_data_returns_the_chosen_element_if_given"""
+
         # Arrange
         request = HttpRequest()
         element = "AC"
@@ -86,6 +100,8 @@ class TestPeriodicTableModuleRenderData(TestCase):
     def test_periodic_table_module_render_data_returns_no_selected_element_if_not_given(
         self, render_template
     ):
+        """test_periodic_table_module_render_data_returns_no_selected_element_if_not_given"""
+
         # Arrange
         request = HttpRequest()
         element = ""
