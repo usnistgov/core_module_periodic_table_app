@@ -1,7 +1,9 @@
 """ Periodic table module view
 """
 
-from core_parser_app.tools.modules.views.builtin.popup_module import AbstractPopupModule
+from core_parser_app.tools.modules.views.builtin.popup_module import (
+    AbstractPopupModule,
+)
 from core_parser_app.tools.modules.views.module import AbstractModule
 
 
