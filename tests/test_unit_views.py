@@ -3,7 +3,7 @@
 from unittest.case import TestCase
 
 from django.http.request import HttpRequest
-from mock.mock import patch
+from unittest.mock import patch
 
 from core_module_periodic_table_app.views import PeriodicTableModule
 
