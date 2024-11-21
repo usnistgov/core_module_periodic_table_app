@@ -1,1 +1,1 @@
-core-parser-app==2.12.*
+core-parser-app==2.13.*
