@@ -1,5 +1,4 @@
-""" Module periodic table testing
-"""
+"""Module periodic table testing"""
 
 from unittest.case import TestCase
 

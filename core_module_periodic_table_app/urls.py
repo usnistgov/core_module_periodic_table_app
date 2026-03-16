@@ -1,5 +1,4 @@
-""" Url router for the periodic table module
-"""
+"""Url router for the periodic table module"""
 
 from django.urls import re_path
 
